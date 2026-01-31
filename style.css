@@ -1,8 +1,18 @@
-* {
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 
-p {
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.video {
     border: solid 2px;
     padding: 100px;
     text-align: center;
@@ -24,11 +34,6 @@ background-color: rgb(122, 158, 213);
 background-color: rgb(127, 198, 127);
 }
 
-.music {
+.musica {
 background-color: rgb(222, 166, 62);
-}
-
-.inicio {
-  text-align: center;
-  font-size: large;
 }
