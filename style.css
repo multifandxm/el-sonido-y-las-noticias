@@ -1,3 +1,51 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -8,8 +56,41 @@ html {
   box-sizing: inherit;
 }
 
+#inicio {
+  color: #222E2F;
+}
+
 ul {
   list-style-type: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #F2EFE2;
+}
+
+.main, .header, .footer, .contact {
+  background-color:#98AA9D;
+}
+
+.newsBtn {
+  background-color: #697C70;
+}
+
+h1, h2 {
+  color:#222E2F;
+  padding: 5px 20px 5px 20px;
+}
+
+p {
+  color:#222E2F;
+  margin: 2% 0 2% 0;
+  padding: 0 20px 5px 20px;
+}
+
+.cartel {
+  background-color: #B3C9D6;
+  padding: 20px;
 }
 
 .video {
