@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticia 1</title>
+
+    <style>
+          @font-face {
+    font-family: 'wotfardregular';
+    src: url('../fonts/Wotfard_Regular_Webfont/wotfard-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Wotfard_Regular_Webfont/wotfard-regular-webfont.eot') format('embedded-opentype'),
+         url('../fonts/Wotfard_Regular_Webfont/wotfard-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+      }
+
+      body{
+        font-family: 'wotfardregular', 'Segoe UI', Tahoma, Verdana, sans-serif;
+      }
+    </style>
+
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -27,25 +44,28 @@
     <div class="main">
         <div class="container">
             <h1>Proyecto I</h1>
-            <div class="videoContainer">
-                <p class="video">Aquí va el video</p>
-            </div>
-            <div class="voice">
-                <p>Locuciones</p>
-                <input type="range">
-                <button class="voz">Locución 1</button> <button class="voz">Locución 2</button>
-            </div>
-            <div class="ambient">
-                <p>Paisaje sonoro</p>
-                <input type="range">
-                <button class="paisaje">Ambiente 1</button> <button class="paisaje">Ambiente 2</button>
-            </div>
-            <div class="music">
-                <p>Música</p>
-                <input type="range">
-                <button class="musica">Música 1</button> <button class="musica">Música 2</button> 
-                <button class="musica">Música 3</button> <button class="musica">Música 4</button>
-            </div>
+                <div class="videoContainer">
+                    <p class="video">Aquí va el video</p>
+                </div>
+
+                <div class="voice">
+                    <p>Locuciones</p>
+                    <input type="range">
+                    <button class="voz">Locución 1</button> <button class="voz">Locución 2</button>
+                </div>
+
+                <div class="ambient">
+                    <p>Paisaje sonoro</p>
+                    <input type="range">
+                    <button class="paisaje">Ambiente 1</button> <button class="paisaje">Ambiente 2</button>
+                </div>
+                
+                <div class="music">
+                    <p>Música</p>
+                    <input type="range">
+                    <button class="musica">Música 1</button> <button class="musica">Música 2</button> 
+                    <button class="musica">Música 3</button> <button class="musica">Música 4</button>
+                </div>
 
             <ul>
                 <li><a href=""><img src="" alt="imagen vectorial de una carpeta"></a><a>Credenciales</a></li>

@@ -46,14 +46,23 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/* RESET END */
+
 html {
   box-sizing: border-box;
+  font-size: clamp(1rem, 0.005rem + 1vw, 2rem);
+  background-color:#98AA9D;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+.main {
+  max-inline-size: 77ch;
+  line-height: 1.65;
 }
 
 #inicio {
@@ -69,15 +78,11 @@ a:link, a:visited, a:hover, a:active {
   color: #F2EFE2;
 }
 
-.main, .header, .footer, .contact {
-  background-color:#98AA9D;
-}
-
 .newsBtn {
   background-color: #697C70;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color:#222E2F;
   padding: 5px 20px 5px 20px;
 }
@@ -91,6 +96,7 @@ p {
 .cartel {
   background-color: #B3C9D6;
   padding: 20px;
+  max-inline-size: 69ch;
 }
 
 .video {
