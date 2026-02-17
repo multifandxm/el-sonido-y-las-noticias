@@ -47,11 +47,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* RESET END */
+:root {
+  --bckgrnd-clr: #98aa9d;
+  --primary-clr: #222E2F;
+  --secondary-clr: #F2EFE2;
+}
 
 html {
   box-sizing: border-box;
-  font-size: clamp(1rem, 0.005rem + 1vw, 2rem);
-  background-color:#98AA9D;
+  font-size: clamp(1rem, 1vw, 2rem);
+  background-color: var(--bckgrnd-clr);
 }
 
 *,
@@ -60,13 +65,18 @@ html {
   box-sizing: inherit;
 }
 
-.main {
+main {
   max-inline-size: 77ch;
   line-height: 1.65;
 }
 
 #inicio {
-  color: #222E2F;
+  color: var(--primary-clr);
+}
+
+#inicio:hover {
+  color: var(--secondary-clr);
+  font-weight: 550;
 }
 
 ul {
@@ -75,20 +85,25 @@ ul {
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-  color: #F2EFE2;
+  color: var(--secondary-clr);
 }
 
 .newsBtn {
   background-color: #697C70;
 }
 
+.newsBtn a:hover {
+  color: var(--primary-clr);
+  font-weight: 550;
+}
+
 h1, h2, h3 {
-  color:#222E2F;
+  color: var(--primary-clr);
   padding: 5px 20px 5px 20px;
 }
 
 p {
-  color:#222E2F;
+  color: var(--primary-clr);
   margin: 2% 0 2% 0;
   padding: 0 20px 5px 20px;
 }
@@ -117,6 +132,12 @@ button {
     font-size: 1.2rem;
 }
 
+button:hover {
+  width: 4.1rem;
+  height: 4.1rem;
+  margin: 0.4rem;
+}
+
 .voice, .ambient, .music {
   background-color: #B3C9D6;
   border-radius: 1rem;
@@ -134,7 +155,7 @@ button {
 
 .voz {
 background-color: rgb(122, 158, 213);
-color:rgb(19, 56, 111) ;
+color:rgb(19, 56, 111);
 }
 
 .paisaje {
