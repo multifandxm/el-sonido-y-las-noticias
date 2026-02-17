@@ -100,27 +100,49 @@ p {
 }
 
 .video {
-    border: solid 2px;
-    padding: 100px;
+    border: none;
+    padding: 10rem;
     text-align: center;
-    background-color: bisque;
+    background-color: #B3C9D6;
+    border-radius: 1rem;
+    margin: 1rem;
 }
 
 button {
-    margin:10px;
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
+    margin:0.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.voice, .ambient, .music {
+  background-color: #B3C9D6;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nameTag {
+  background-color: #8BAEC3;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .voz {
 background-color: rgb(122, 158, 213);
+color:rgb(19, 56, 111) ;
 }
 
 .paisaje {
 background-color: rgb(127, 198, 127);
+color: rgb(27, 90, 27);
 }
 
 .musica {
 background-color: rgb(222, 166, 62);
+color: rgb(132, 87, 3);
 }
