@@ -120,6 +120,8 @@ p {
   max-inline-size: 69ch;
 }
 
+/*pages*/
+
 .video {
     border: none;
     padding: 10rem;
@@ -138,14 +140,6 @@ p {
     border-radius: 1rem;
     border: none;
     font-size: 1.2rem;
-}
-
-.musica:hover,
-.paisaje:hover,
-.voz:hover {
-  width: 4.1rem;
-  height: 4.1rem;
-  margin: 0.4rem;
 }
 
 .voice,
@@ -170,15 +164,29 @@ background-color: rgb(122, 158, 213);
 color:rgb(19, 56, 111);
 }
 
+.voz:hover {
+outline: 2px solid rgb(122, 158, 213);
+}
+
 .paisaje {
 background-color: rgb(127, 198, 127);
 color: rgb(27, 90, 27);
+}
+
+.paisaje:hover {
+  outline: 2px solid rgb(127, 198, 127);
 }
 
 .musica {
 background-color: rgb(222, 166, 62);
 color: rgb(132, 87, 3);
 }
+
+.musica:hover {
+  outline: 2px solid rgb(222, 166, 62);
+}
+
+/*pages*/
 
 /*form style*/
 
@@ -208,18 +216,20 @@ input,
 textarea,
 .formBtn {
   margin: 1%;
+  border: none;
+  min-height: 2em;
 }
 
 input:focus,
 textarea:focus {
-  outline-style: solid;
-  outline-color: var(--primary-clr);
+  outline: 1px solid var(--primary-clr);
 }
 
 textarea {
   vertical-align: top;
   height: 10em;
   width: 98%;
+  resize: none;
 }
 
 .formBtn {
@@ -230,6 +240,7 @@ textarea {
 
 .formBtn:hover {
   background-color: var(--primary-clr);
+  outline: 1px solid var(--primary-clr);
 }
 
 /*form style end*/
