@@ -53,26 +53,41 @@
                 <div class="voice">
                     <div class="nameTag">
                         <p>Locuciones</p>
-                        <input type="range">
+                        <label for="volume-voice">Volumen</label>
+                        <input type="range" id="volume-voice" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                        <output>0 dB</output>
                     </div>
-                    <button class="voz">1</button> <button class="voz">2</button>
+
+                    <div class="controls">
+                        <button class="voz">1</button> <button class="voz">2</button>
+                    </div>
                 </div>
 
                 <div class="ambient">
                     <div class="nameTag">
                         <p>Paisaje sonoro</p>
-                        <input type="range">
+                        <label for="volume-ambient">Volumen</label>
+                        <input type="range" id="volume-ambient" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                        <output>0 dB</output>
                     </div>
-                    <button class="paisaje">1</button> <button class="paisaje">2</button>
+
+                    <div class="controls">
+                        <button class="paisaje">1</button> <button class="paisaje">2</button>
+                    </div>
                 </div>
 
                 <div class="music">
                     <div class="nameTag">
                         <p>Música</p>
-                        <input type="range">
+                        <label for="volume-music">Volumen</label>
+                        <input type="range" id="volume-music" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                        <output>0 dB</output>
                     </div>
-                    <button class="musica">1</button> <button class="musica">2</button> 
-                    <button class="musica">3</button> <button class="musica">4</button>
+
+                    <div class="controls">
+                        <button class="musica">1</button> <button class="musica">2</button> 
+                        <button class="musica">3</button> <button class="musica">4</button>
+                    </div>
                 </div>
 
             <ul>
@@ -81,8 +96,8 @@
         </div>
     </main>
 
-    <div class="footer">
+    <footer>
 
-    </div>
+    </footer>
 </body>
 </html>
