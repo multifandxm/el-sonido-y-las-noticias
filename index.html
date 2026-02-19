@@ -82,26 +82,26 @@
       <fieldset>
         <legend><strong>Contacto</strong></legend>
           <div>
-            <label for="name">Nombre:</label>
+            <label for="name">* Nombre:</label>
           </div>
 
           <div>
-            <input type="text" name="user_name" id="name" placeholder="Tu nombre">
+            <input type="text" name="user_name" id="name" placeholder="Tu nombre" minlength="2" pattern="[A-Za-z\s'-]+" required>
           </div>
 
           <div>
-            <label for="mail">Correo electrónico:</label>
+            <label for="mail">* Correo electrónico:</label>
           </div>
 
           <div>
-            <input type="email" name="user_email" id="mail" placeholder="nombre@correo.com">
+            <input type="email" name="user_email" id="mail" placeholder="nombre@correo.com" required>
           </div>
 
           <div>
-            <label for="message">Mensaje:</label>
+            <label for="message">* Mensaje:</label>
           </div>
           <div>
-            <textarea name="user_message" id="message" placeholder="Escribe tu mensaje..."></textarea>
+            <textarea name="user_message" id="message" placeholder="Escribe tu mensaje..." required></textarea>
           </div>
 
           <div>

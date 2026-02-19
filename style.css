@@ -140,9 +140,7 @@ p {
 }
 
 /*volume sliders*/
-#volume-voice,
-#volume-ambient,
-#volume-music {
+input[type="range"] {
   font-size: 0.5rem;
   writing-mode: vertical-lr;
   direction: rtl;
@@ -273,7 +271,7 @@ textarea {
 
 .formBtn:hover {
   background-color: var(--primary-clr);
-  outline: 1px solid var(--primary-clr);
+  outline: 0.15rem solid var(--primary-clr);
 }
 
 /*form style end*/
