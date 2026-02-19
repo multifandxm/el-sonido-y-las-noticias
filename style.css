@@ -159,6 +159,14 @@ p {
   font-size: 1.2rem;
 }
 
+#volume-voice,
+#volume-ambient,
+#volume-music {
+  font-size: 0.5rem;
+  writing-mode: vertical-lr;
+  direction: rtl;
+}
+
 .voz {
 background-color: rgb(122, 158, 213);
 color:rgb(19, 56, 111);
@@ -206,7 +214,9 @@ fieldset {
   padding: 1em;
 }
 
-label {
+#name,
+#mail,
+#message {
   display: inline-block;
   min-width: 400px;
   text-align: left;
@@ -220,7 +230,9 @@ textarea,
   min-height: 2em;
 }
 
-input:focus,
+#name:focus,
+#mail:focus,
+#message:focus,
 textarea:focus {
   outline: 1px solid var(--primary-clr);
 }
