@@ -46,11 +46,13 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-/* RESET END */
+/*reset end*/
+
 :root {
   --bckgrnd-clr: #98aa9d;
   --primary-clr: #222E2F;
   --secondary-clr: #F2EFE2;
+  --labels-bg-clr: #B3C9D6;
 }
 
 html {
@@ -83,12 +85,16 @@ ul {
   list-style-type: none;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
   color: var(--secondary-clr);
 }
 
-.newsBtn {
+.newsBtn,
+.formBtn {
   background-color: #697C70;
 }
 
@@ -109,7 +115,7 @@ p {
 }
 
 .cartel {
-  background-color: #B3C9D6;
+  background-color: var(--labels-bg-clr);
   padding: 20px;
   max-inline-size: 69ch;
 }
@@ -118,12 +124,14 @@ p {
     border: none;
     padding: 10rem;
     text-align: center;
-    background-color: #B3C9D6;
+    background-color: var(--labels-bg-clr);
     border-radius: 1rem;
     margin: 1rem;
 }
 
-button {
+.musica,
+.paisaje,
+.voz {
     margin:0.5rem;
     width: 4rem;
     height: 4rem;
@@ -132,13 +140,17 @@ button {
     font-size: 1.2rem;
 }
 
-button:hover {
+.musica:hover,
+.paisaje:hover,
+.voz:hover {
   width: 4.1rem;
   height: 4.1rem;
   margin: 0.4rem;
 }
 
-.voice, .ambient, .music {
+.voice,
+.ambient,
+.music {
   background-color: #B3C9D6;
   border-radius: 1rem;
   margin: 1rem;
@@ -166,4 +178,66 @@ color: rgb(27, 90, 27);
 .musica {
 background-color: rgb(222, 166, 62);
 color: rgb(132, 87, 3);
+}
+
+/*form style*/
+
+form {
+  display: inline-block;
+  padding: 1em;
+  min-width: 700px;
+  background-color: var(--labels-bg-clr);
+}
+
+legend {
+  font-size: larger;
+}
+
+fieldset {
+  border: none;
+  padding: 1em;
+}
+
+label {
+  display: inline-block;
+  min-width: 400px;
+  text-align: left;
+}
+
+input, 
+textarea,
+.formBtn {
+  margin: 1%;
+}
+
+input:focus,
+textarea:focus {
+  outline-style: solid;
+  outline-color: var(--primary-clr);
+}
+
+textarea {
+  vertical-align: top;
+  height: 10em;
+  width: 98%;
+}
+
+.formBtn {
+  padding: 0.2em 0.4em;
+  color: var(--secondary-clr);
+  border: none;
+}
+
+.formBtn:hover {
+  background-color: var(--primary-clr);
+}
+
+/*form style end*/
+
+/*footer*/
+
+footer {
+  height: 100px;
+  background-color: var(--primary-clr);
+  margin-top: 4%;
 }
