@@ -66,8 +66,99 @@ html {
 *::after {
   box-sizing: inherit;
 }
+ /* page layout */
 
-main {
+.container-landing,
+.container-pages {
+  display: grid;
+  grid-template-areas: 
+    'header header header'
+    '. main .'
+    '. form .'
+    'footer footer footer';
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-content {
+  grid-area: main;
+}
+
+.grid-contact {
+  grid-area: form;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+.grid-project {
+  grid-area: project;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+img {
+  padding: 10px;
+}
+
+.newsBtn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.return {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: justify;
+}
+
+.cartel {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.other-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.tesis, 
+.licencias,
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* layout end */
+
+main,
+.cartel {
   max-inline-size: 77ch;
   line-height: 1.65;
 }
@@ -98,6 +189,10 @@ a:active {
   background-color: #697C70;
 }
 
+.newsBtn {
+  border-radius: 0 0 2rem 2rem;
+}
+
 .newsBtn a:hover {
   color: var(--primary-clr);
   font-weight: 550;
@@ -116,8 +211,8 @@ p {
 
 .cartel {
   background-color: var(--labels-bg-clr);
-  padding: 20px;
-  max-inline-size: 69ch;
+  padding: 2rem;
+  width: 100vw;
 }
 
 /*pages*/
@@ -217,9 +312,11 @@ color: rgb(132, 87, 3);
 /*form style*/
 
 form {
-  display: inline-block;
+  display: flex;
   padding: 1em;
   min-width: 700px;
+  width: 100vw;
+  max-inline-size: 77ch;
   background-color: var(--labels-bg-clr);
 }
 
@@ -235,7 +332,7 @@ fieldset {
 #name,
 #mail,
 #message {
-  display: inline-block;
+  display: flex;
   min-width: 400px;
   text-align: left;
 }

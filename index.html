@@ -24,96 +24,97 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-        <ul>
-            <li><a href="../index.html" id="inicio">Inicio</a></li>
-        </ul>
-
-        <ul class="newsBtn">
-            <li><a href="./pages/news-1.html">Noticia I</a></li>
-            <li><a href="">Noticia II</a></li>
-            <li><a href="">Noticia III</a></li>
-        </ul>
-
-        <ul>
-            <li><img src="" alt="imagen vectorial de una luna"></li>
-            <li><img src="" alt="imagen vectorial del planeta tierra"></li>
-        </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="container">
-      <h1>El sonido y las noticias:</h1>
-        <h2>Usos del sonido en noticieros televisivos y sus efectos en la percepción de las noticias por la audiencia</h2>
-          <h3>Resumen</h3>
-            <p>
-              En este trabajo de creación sonora se busca analizar y mostrar, a través de una instalación, 
-              cómo los usos del sonido en un programa informativo influyen en la interpretación de las 
-              noticias y pueden establecer posibles sesgos mediante la aplicación de los recursos sonoros. 
-              El objetivo de esta instalación es promover una escucha activa y crítica de las principales 
-              fuentes de información. Para reconocer cuáles son los recursos sonoros más relevantes y 
-              utilizados por los noticieros televisivos se realizó el análisis de informativos de Uruguay, 
-              Argentina y México. Se llevaron adelante entrevistas con distintos profesionales del área del 
-              sonido; locutores y locutoras, considerando los usos de la voz como uno de los recursos más 
-              influyentes al transmitir una noticia. Por último, la instalación se realiza en base a tres noticias 
-              y consta de una experiencia interactiva, donde las y los participantes podrán alterar en tiempo 
-              real la música, el sonido directo y la locución del evento noticioso en cuestión.
-            </p>
-            <p>
-              <strong>Palabras clave:</strong> creación sonora, instalación sonora, sonido, información, percepción, comunicación, noticias.
-            </p>
-            <p class="cartel">
-              Este trabajo fue realizado por Orianna Machado y Guillermo Vila en el marco del Trabajo Final de Grado de la 
-              Licenciatura en Comunicación, facilitado por la Facultad de Información y Comunicación (FIC) - Universidad de 
-              la República (UdelaR).
-            </p>
-          <ul>
-            <li><a href=""><img src="" alt="imagen vectorial de una hoja escrita"></a><a>Tesis</a></li>
-            <li><a href=""><img src="" alt="imagen vectorial de una carpeta"></a><a>Credenciales</a></li>
-            <li><a href=""><img src="" alt="imagen vectorial de un sobre de papel"></a><a>Contacto</a></li>
+  <div class="container-landing">
+    <header class="grid-header">
+      <nav>
+          <ul class="return">
+              <li><a href="../index.html" id="inicio">Inicio</a></li>
           </ul>
+
+          <ul class="newsBtn">
+              <li><a href="./pages/news-1.html">Noticia I</a></li>
+              <li><a href="">Noticia II</a></li>
+              <li><a href="">Noticia III</a></li>
+          </ul>
+
+          <ul class="settings">
+              <li><img src="svg/moon.svg" alt="imagen vectorial de una luna"></li>
+              <li><img src="svg/globe.svg" alt="imagen vectorial del planeta tierra"></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main class="grid-content">
+      <div class="container">
+        <h1>El sonido y las noticias:</h1>
+          <h2>Usos del sonido en noticieros televisivos y sus efectos en la percepción de las noticias por la audiencia</h2>
+            <h3>Resumen</h3>
+              <p>
+                En este trabajo de creación sonora se busca analizar y mostrar, a través de una instalación, 
+                cómo los usos del sonido en un programa informativo influyen en la interpretación de las 
+                noticias y pueden establecer posibles sesgos mediante la aplicación de los recursos sonoros. 
+                El objetivo de esta instalación es promover una escucha activa y crítica de las principales 
+                fuentes de información. Para reconocer cuáles son los recursos sonoros más relevantes y 
+                utilizados por los noticieros televisivos se realizó el análisis de informativos de Uruguay, 
+                Argentina y México. Se llevaron adelante entrevistas con distintos profesionales del área del 
+                sonido; locutores y locutoras, considerando los usos de la voz como uno de los recursos más 
+                influyentes al transmitir una noticia. Por último, la instalación se realiza en base a tres noticias 
+                y consta de una experiencia interactiva, donde las y los participantes podrán alterar en tiempo 
+                real la música, el sonido directo y la locución del evento noticioso en cuestión.
+              </p>
+              <p>
+                <strong>Palabras clave:</strong> creación sonora, instalación sonora, sonido, información, percepción, comunicación, noticias.
+              </p>
+              <p class="cartel">
+                Este trabajo fue realizado por Orianna Machado y Guillermo Vila en el marco del Trabajo Final de Grado de la 
+                Licenciatura en Comunicación, facilitado por la Facultad de Información y Comunicación (FIC) - Universidad de 
+                la República (UdelaR).
+              </p>
+            <ul class="other-buttons">
+              <li class="tesis"><a href=""><img src="svg/file-text.svg" alt="imagen vectorial de una hoja escrita"></a><a>Tesis</a></li>
+              <li class="licencias"><a href=""><img src="svg/folder.svg" alt="imagen vectorial de una carpeta"></a><a>Licencias</a></li>
+              <li class="contacto"><a href=""><img src="svg/mail.svg" alt="imagen vectorial de un sobre de papel"></a><a>Contacto</a></li>
+            </ul>
+      </div>
+    </main>
+
+    <div class="grid-contact">
+      <form action="/my-handling-form-page" method="post">
+        <fieldset>
+          <legend><strong>Contacto</strong></legend>
+            <div>
+              <label for="name">* Nombre:</label>
+            </div>
+
+            <div>
+              <input type="text" name="user_name" id="name" placeholder="Tu nombre" minlength="2" pattern="[A-Za-z\s'-]+" required>
+            </div>
+
+            <div>
+              <label for="mail">* Correo electrónico:</label>
+            </div>
+
+            <div>
+              <input type="email" name="user_email" id="mail" placeholder="nombre@correo.com" required>
+            </div>
+
+            <div>
+              <label for="message">* Mensaje:</label>
+            </div>
+            <div>
+              <textarea name="user_message" id="message" placeholder="Escribe tu mensaje..." required></textarea>
+            </div>
+
+            <div>
+              <button type="reset" class="formBtn">Cancelar</button>
+              <button type="submit" class="formBtn">Enviar</button>
+            </div>
+        </fieldset>
+      </form>
     </div>
-  </main>
-
-  <div class="contact">
-    <form action="/my-handling-form-page" method="post">
-      <fieldset>
-        <legend><strong>Contacto</strong></legend>
-          <div>
-            <label for="name">* Nombre:</label>
-          </div>
-
-          <div>
-            <input type="text" name="user_name" id="name" placeholder="Tu nombre" minlength="2" pattern="[A-Za-z\s'-]+" required>
-          </div>
-
-          <div>
-            <label for="mail">* Correo electrónico:</label>
-          </div>
-
-          <div>
-            <input type="email" name="user_email" id="mail" placeholder="nombre@correo.com" required>
-          </div>
-
-          <div>
-            <label for="message">* Mensaje:</label>
-          </div>
-          <div>
-            <textarea name="user_message" id="message" placeholder="Escribe tu mensaje..." required></textarea>
-          </div>
-
-          <div>
-            <button type="reset" class="formBtn">Cancelar</button>
-            <button type="submit" class="formBtn">Enviar</button>
-          </div>
-      </fieldset>
-    </form>
   </div>
-   
-  <footer>
-
-  </footer>
 </body>
+    <footer class="grid-footer">
+
+    </footer>
 </html>
