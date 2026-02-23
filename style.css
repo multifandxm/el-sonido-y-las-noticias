@@ -181,14 +181,18 @@ img {
   padding: 1rem;
 }
 
-.tesis {
-
-}
-
 .tesis:hover, 
 .licencias:hover,
-.contacto:hover {
+.contacto:hover,
+.moon-sun:hover,
+.globe:hover {
   background-color: #83988a;
+  border-radius: 100%;
+}
+
+.return:hover {
+  background-color: #83988a;
+  border-radius: 1rem 1rem 1rem 1rem;
 }
 
 /* layout end */
@@ -216,9 +220,12 @@ ul {
 a:link,
 a:visited,
 a:hover,
-a:active {
+a:active,
+.moon-sun:hover,
+.globe:hover {
   text-decoration: none;
   color: var(--secondary-clr);
+  cursor: pointer;
 }
 
 .newsBtn,
