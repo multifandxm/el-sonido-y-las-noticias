@@ -71,10 +71,10 @@ html {
 .container-landing {
   display: grid;
   grid-template-areas: 
-    'header header header'
-    '. main .'
-    '. form .'
-    'footer footer footer';
+    "header header header"
+    ". main ."
+    ". form ."
+    "footer footer footer";
   justify-items: center;
   row-gap: 2rem;
 }
@@ -105,7 +105,7 @@ html {
 .grid-footer {
   grid-area: footer;
   width: 100vw;
-  height: 6rem;
+  height: 100vh;
   background-color: #222E2F;
 }
 
