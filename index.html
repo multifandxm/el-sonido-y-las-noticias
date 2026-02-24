@@ -46,7 +46,9 @@
 
     <main class="grid-content">
       <section data-title="abstract">
-        <h1>El sonido y las noticias:</h1>
+        <h1 id="abstract-title">
+          <a href="#abstract-title">El sonido y las noticias:</a>
+        </h1>
           <h2>Usos del sonido en noticieros televisivos y sus efectos en la percepción de las noticias por la audiencia</h2>
             <h3>Resumen</h3>
               <p>
@@ -73,17 +75,18 @@
                   la República (UdelaR).
                 </p>
               </div>
-
-            <ul class="other-buttons">
-              <li class="tesis"><a href=""><img src="svg/file-text.svg" alt="imagen vectorial de una hoja escrita"></a><a href="">Tesis</a></li>
-              <li class="licencias"><a href=""><img src="svg/folder.svg" alt="imagen vectorial de una carpeta"></a><a href="">Licencias</a></li>
-              <li class="contacto"><a href="#form"><img src="svg/mail.svg" alt="imagen vectorial de un sobre de papel"></a><a href="#form">Contacto</a></li>
-            </ul>
       </section>
     </main>
+
+    <section id="other-links">
+      <ul class="other-buttons">
+        <li class="tesis"><a href=""><img src="svg/file-text.svg" alt="imagen vectorial de una hoja escrita"></a><a href="">Tesis</a></li>
+        <li class="licencias"><a href=""><img src="svg/folder.svg" alt="imagen vectorial de una carpeta"></a><a href="">Licencias</a></li>
+        <li class="contacto"><a href="#form"><img src="svg/mail.svg" alt="imagen vectorial de un sobre de papel"></a><a href="#form">Contacto</a></li>
+      </ul>
+    </section>
     
-    <details id="form">
-      <summary>Contacto</summary>
+    <section id="form">
       <form action="/my-handling-form-page" method="post">
         <fieldset>
           <legend><strong>Contacto</strong></legend>
@@ -116,11 +119,10 @@
             </div>
         </fieldset>
       </form>
-    </details>
-    
+    </section>
   </div>
-</body>
-    <footer class="grid-footer">
+  <footer class="grid-footer">
 
-    </footer>
+  </footer>
+</body>
 </html>
