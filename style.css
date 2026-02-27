@@ -132,6 +132,7 @@ img {
 
 .newsBtn {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -153,7 +154,8 @@ img {
   text-align: justify;
 }
 
-.cartel-text {
+.cartel-text,
+.flex-text {
   display: flex;
   justify-content: stretch;
   align-items: center;
@@ -171,10 +173,6 @@ img {
   font-size: 1.2rem;
 }
 
-.other-buttons a:hover {
-  color: var(--secondary-clr);
-}
-
 .tesis, 
 .licencias,
 .contacto {
@@ -185,6 +183,68 @@ img {
   height: 97px;
   width: 95px;
   padding: 1rem;
+}
+
+/* layout end */
+
+main,
+.cartel {
+  max-inline-size: 77ch;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+}
+
+#inicio:link,
+#inicio:visited,
+#inicio:active {
+  color: var(--primary-clr);
+}
+
+#inicio:hover {
+  color: var(--secondary-clr);
+  font-weight: 550;
+}
+
+#abstract-title a:link,
+#abstract-title a:hover,
+#abstract-title a:visited,
+#abstract-title a:active {
+  color: var(--primary-clr);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.newsBtn a:link,
+.newsBtn a:visited,
+.newsBtn a:active,
+.moon-sun:hover,
+.globe:hover {
+  color: var(--secondary-clr);
+  cursor: pointer;
+}
+
+.newsBtn a:hover {
+  color: var(--primary-clr);
+  font-weight: 550;
+}
+
+.newsBtn,
+.formBtn {
+  background-color: #697C70;
+}
+
+.newsBtn {
+  border-radius: 0 0 2rem 2rem;
+}
+
+.other-buttons a:hover {
+  color: var(--secondary-clr);
 }
 
 .tesis:hover, 
@@ -203,58 +263,6 @@ img {
 .return:hover {
   background-color: #83988a;
   border-radius: 1rem 1rem 1rem 1rem;
-}
-
-/* layout end */
-
-main,
-.cartel {
-  max-inline-size: 77ch;
-  line-height: 1.65;
-}
-
-#inicio,
-a:visited {
-  color: var(--primary-clr);
-}
-
-#inicio:hover {
-  color: var(--secondary-clr);
-  font-weight: 550;
-}
-
-#abstract-title a:hover {
-  color: var(--primary-clr);
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-a:link,
-.newsBtn a:visited,
-a:hover,
-a:active,
-.moon-sun:hover,
-.globe:hover {
-  text-decoration: none;
-  color: var(--secondary-clr);
-  cursor: pointer;
-}
-
-.newsBtn,
-.formBtn {
-  background-color: #697C70;
-}
-
-.newsBtn {
-  border-radius: 0 0 2rem 2rem;
-}
-
-.newsBtn a:hover {
-  color: var(--primary-clr);
-  font-weight: 550;
 }
 
 h1, h2, h3 {
