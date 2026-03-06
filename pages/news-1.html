@@ -47,19 +47,23 @@
         <section data-title="project">
             <h1>Proyecto I</h1>
                 <div class="videoContainer">
-                    <p class="video">Aquí va el video</p>
+                  <video autoplay loop>
+                    <source src="../videos/VIDEO_protesta_jubilados.mp4" />
+                  </video>
                 </div>
 
                 <div class="voice">
                     <div class="nameTag">
                         <p class="tag">Locuciones</p>
                         <label for="volume-voice"></label>
-                        <input type="range" id="volume-voice" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                        <input type="range" id="volume-voice" name="volume" min="-60" max="24" value="0" step="3" oninput="controlVocesVolume(this.value); this.nextElementSibling.value = this.value">
                         <output class="dB">0 dB</output>
                     </div>
 
                     <div class="controls">
-                        <button class="voz">1</button> <button class="voz">2</button>
+                        <button onclick="muteLocucion2()" id="locucion1Button" class="voz">1</button> <button class="voz">2</button>
+                        <audio id="locucion-1" autoplay style="visibility:hidden" src="../music/Voz en off STG_01.wav" />
+                        <audio id="locucion-2" autoplay style="visibility:hidden" src="../music/Voz en Off 2.mp3" />
                     </div>
                 </div>
 
@@ -97,6 +101,26 @@
     <footer class="grid-footer">
 
     </footer>
-</body>
+    <script>
+      let locucion2muted = document.getElementById('locucion-2').muted
+      function muteLocucion2() {
+        document.getElementById("locucion-2").muted = locucion2muted = !locucion2muted;
+        document.getElementById("locucion1Button").style = locucion2muted ? "background-color:green" : "#B3C9D6";
+      } 
 
+      let voces1Player = document.getElementById("locucion-2")
+      let voces2Player = document.getElementById("locucion-1")
+      function normalizeVolume(value) {
+        const min = -60
+        const max = 24
+        return (value - min) / (max - min)
+      }
+      function controlVocesVolume(newVolume) {
+        let volume = normalizeVolume(newVolume)
+        voces1Player.volume = volume;
+        voces2Player.volume = volume;
+      }
+
+    </script>
+</body>
 </html>
