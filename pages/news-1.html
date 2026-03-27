@@ -107,6 +107,11 @@
       }
 
       let locucion2muted = document.getElementById('locucion-2').muted
+      let locucion1muted = document.getElementById('locucion-1').muted
+
+      document.getElementById("locucion1Button").style = locucion2muted ? "background-color:green" : "";
+      document.getElementById("locucion2Button").style = locucion1muted ? "background-color:green" : "";
+
       function muteLocucion2() {
         document.getElementById("locucion-2").muted = locucion2muted = !locucion2muted;
         document.getElementById("locucion2Button").style = locucion2muted ? "background-color:green" : "#B3C9D6";
@@ -114,6 +119,7 @@
 
       let voces1Player = document.getElementById("locucion-2")
       let voces2Player = document.getElementById("locucion-1")
+
       function normalizeVolume(value) {
         const min = -60
         const max = 24
