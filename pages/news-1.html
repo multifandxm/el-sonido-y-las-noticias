@@ -46,9 +46,7 @@
     <main class="grid-content-pages">
         <h1 class="project-title">Proyecto I</h1>  
             <section class="grid-video">     
-                <div class="video">         
-                  <iframe src="https://drive.google.com/file/d/1_fHC6Qh36yTI1f0jV0i-5AI7dQeKQSEU/preview" width="640" height="480"></iframe>
-                </div>
+                <video class="video" autoplay loop src="../NO-SUBIR/noticia-1/VIDEO_protesta_jubilados.mp4"></video>
             </section>
 
             <section class="grid-tracks">
@@ -62,8 +60,8 @@
 
                         <div class="controls">
                             <button onclick="muteLocucion1()" id="locucion1Button" class="voz">1</button> <button onclick="muteLocucion2()" id="locucion2Button" class="voz">2</button>
-                            <audio id="locucion-1" autoplay loop style="visibility:hidden" src="../news-daw/Noticia_01_protestas/locucion_01_EFE.wav"></audio>
-                            <audio id="locucion-2" autoplay loop muted style="visibility:hidden" src="../news-daw/Noticia_01_protestas/locucion_02_C5N.wav"></audio>
+                            <audio id="locucion-1" autoplay loop style="visibility:hidden" src="../NO-SUBIR/noticia-1/locucion_01_EFE.wav"></audio>
+                            <audio id="locucion-2" autoplay loop muted style="visibility:hidden" src="../NO-SUBIR/noticia-1/locucion_02_C5N.wav"></audio>
                         </div>
                     </div>
 
@@ -105,13 +103,13 @@
     let locucion1muted = document.getElementById('locucion-1').muted
     function muteLocucion1() {
         document.getElementById("locucion-1").muted = locucion1muted = !locucion1muted;
-        document.getElementById("locucion1Button").style = locucion1muted ? "background-color:red" : "#B3C9D6"
+        document.getElementById("locucion1Button").style = locucion1muted ? "background-color:green" : "#B3C9D6"
       }
 
       let locucion2muted = document.getElementById('locucion-2').muted
       function muteLocucion2() {
         document.getElementById("locucion-2").muted = locucion2muted = !locucion2muted;
-        document.getElementById("locucion2Button").style = locucion2muted ? "background-color:red" : "#B3C9D6";
+        document.getElementById("locucion2Button").style = locucion2muted ? "background-color:green" : "#B3C9D6";
       } 
 
       let voces1Player = document.getElementById("locucion-2")

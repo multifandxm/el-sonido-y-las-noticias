@@ -357,7 +357,7 @@ main > p {
 
 /*pages*/
 
-video {
+.video {
     padding: 3px;
     background-color: var(--labels-bg-clr);
     border-radius: 1rem;
