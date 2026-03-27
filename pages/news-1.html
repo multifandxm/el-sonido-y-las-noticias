@@ -43,65 +43,71 @@
         </nav>
     </header>
 
-    <main class="grid-project">
-        <section data-title="project">
-            <h1>Proyecto I</h1>
-                <div class="videoContainer">
-                  <video autoplay loop>
-                    <source src="../../videos/VIDEO_protesta_jubilados.mp4" />
-                  </video>
+    <main class="grid-content-pages">
+        <h1 class="project-title">Proyecto I</h1>  
+            <section class="grid-video">     
+                <div class="video">         
+                  <iframe src="https://drive.google.com/file/d/1_fHC6Qh36yTI1f0jV0i-5AI7dQeKQSEU/preview" width="640" height="480"></iframe>
                 </div>
+            </section>
 
-                <div class="voice">
-                    <div class="nameTag">
-                        <p class="tag">Locuciones</p>
-                        <label for="volume-voice"></label>
-                        <input type="range" id="volume-voice" name="volume" min="-60" max="24" value="0" step="3" oninput="controlVocesVolume(this.value); this.nextElementSibling.value = this.value">
-                        <output class="dB">0 dB</output>
+            <section class="grid-tracks">
+                    <div class="voice">
+                        <div class="nameTag">
+                            <p class="tag">Locuciones</p>
+                            <label for="volume-voice"></label>
+                            <input type="range" id="volume-voice" name="volume" min="-60" max="24" value="0" step="3" oninput="controlVocesVolume(this.value); this.nextElementSibling.value = this.value">
+                            <output class="dB">0 dB</output>
+                        </div>
+
+                        <div class="controls">
+                            <button onclick="muteLocucion1()" id="locucion1Button" class="voz">1</button> <button onclick="muteLocucion2()" id="locucion2Button" class="voz">2</button>
+                            <audio id="locucion-1" autoplay loop style="visibility:hidden" src="../news-daw/Noticia_01_protestas/locucion_01_EFE.wav"></audio>
+                            <audio id="locucion-2" autoplay loop muted style="visibility:hidden" src="../news-daw/Noticia_01_protestas/locucion_02_C5N.wav"></audio>
+                        </div>
                     </div>
 
-                    <div class="controls">
-                        <button onclick="muteLocucion1()" id="locucion1Button" class="voz">1</button> <button onclick="muteLocucion2()" id="locucion2Button" class="voz">2</button>
-                        <audio id="locucion-1" autoplay style="visibility:hidden" src="../../videos/locución_01_EFE.wav" />
-                        <audio id="locucion-2" autoplay muted style="visibility:hidden" src="../../videos/locución_02_C5N.wav" />
-                    </div>
-                </div>
+                    <div class="ambient">
+                        <div class="nameTag">
+                            <p class="tag">Paisaje sonoro</p>
+                            <label for="volume-ambient"></label>
+                            <input type="range" id="volume-ambient" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                            <output class="dB">0 dB</output>
+                        </div>
 
-                <div class="ambient">
-                    <div class="nameTag">
-                        <p class="tag">Paisaje sonoro</p>
-                        <label for="volume-ambient"></label>
-                        <input type="range" id="volume-ambient" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
-                        <output class="dB">0 dB</output>
+                        <div class="controls">
+                            <button class="paisaje">1</button> <button class="paisaje">2</button>
+                        </div>
                     </div>
 
-                    <div class="controls">
-                        <button class="paisaje">1</button> <button class="paisaje">2</button>
-                    </div>
-                </div>
+                    <div class="music">
+                        <div class="nameTag">
+                            <p class="tag">Música</p>
+                            <label for="volume-music"></label>
+                            <input type="range" id="volume-music" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                            <output class="dB">0 dB</output>
+                        </div>
 
-                <div class="music">
-                    <div class="nameTag">
-                        <p class="tag">Música</p>
-                        <label for="volume-music"></label>
-                        <input type="range" id="volume-music" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
-                        <output class="dB">0 dB</output>
+                        <div class="controls">
+                            <button class="musica">1</button> <button class="musica">2</button> 
+                            <button class="musica">3</button> <button class="musica">4</button>
+                        </div>
                     </div>
-
-                    <div class="controls">
-                        <button class="musica">1</button> <button class="musica">2</button> 
-                        <button class="musica">3</button> <button class="musica">4</button>
-                    </div>
-                </div>
-
-                <p class="licencias"><a href=""><img src="../svg/folder.svg" alt="imagen vectorial de una carpeta"></a><a href="" class="licencias-pag">Licencias</a></p>
-        </section>
+            </section>
     </main>
 
     <footer class="grid-footer">
-
+      <p>© 2026 Orianna Machado & Guillermo Vila</p>
     </footer>
+    
     <script>
+
+    let locucion1muted = document.getElementById('locucion-1').muted
+    function muteLocucion1() {
+        document.getElementById("locucion-1").muted = locucion1muted = !locucion1muted;
+        document.getElementById("locucion1Button").style = locucion1muted ? "background-color:red" : "#B3C9D6"
+      }
+
       let locucion2muted = document.getElementById('locucion-2').muted
       let locucion1muted = document.getElementById('locucion-1').muted
 
@@ -110,11 +116,7 @@
 
       function muteLocucion2() {
         document.getElementById("locucion-2").muted = locucion2muted = !locucion2muted;
-        document.getElementById("locucion2Button").style = !locucion2muted ? "background-color:green" : "";
-      } 
-      function muteLocucion1() {
-        document.getElementById("locucion-1").muted = locucion1muted = !locucion1muted;
-        document.getElementById("locucion1Button").style = !locucion1muted ? "background-color:green" : "";
+        document.getElementById("locucion2Button").style = locucion2muted ? "background-color:red" : "#B3C9D6";
       } 
 
       let voces1Player = document.getElementById("locucion-2")
@@ -133,4 +135,5 @@
 
     </script>
 </body>
+
 </html>
