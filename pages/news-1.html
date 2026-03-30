@@ -54,7 +54,7 @@
                         <div class="nameTag">
                             <p class="tag">Locuciones</p>
                             <label for="volume-voice"></label>
-                            <input type="range" id="volume-voice" name="volume" min="-60" max="24" value="0" step="3" oninput="controlVocesVolume(this.value); this.nextElementSibling.value = this.value">
+                            <input type="range" id="volume-voice" name="volume" min="-60" max="24" value="0" step="3" oninput="controlVolume(this.value); this.nextElementSibling.value = this.value">
                             <output class="dB">0 dB</output>
                         </div>
 
@@ -69,12 +69,14 @@
                         <div class="nameTag">
                             <p class="tag">Paisaje sonoro</p>
                             <label for="volume-ambient"></label>
-                            <input type="range" id="volume-ambient" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                            <input type="range" id="volume-ambient" name="volume" min="-60" max="24" value="0" step="3" oninput="controlVolume(this.value); this.nextElementSibling.value = this.value">
                             <output class="dB">0 dB</output>
                         </div>
 
                         <div class="controls">
-                            <button class="paisaje">1</button> <button class="paisaje">2</button>
+                            <button onclick="muteAmbiente1()" id="ambiente1Button" class="paisaje">1</button> <button onclick="muteAmbiente2()" id="ambiente2Button" class="paisaje">2</button>
+                            <audio id="ambiente-1" autoplay loop style="visibility:hidden" src="../NO-SUBIR/noticia-1/ambiente_01_protesta.wav"></audio>
+                            <audio id="ambiente-2" autoplay loop muted style="visibility:hidden" src="../NO-SUBIR/noticia-1/ambiente_02_trafico.wav"></audio>
                         </div>
                     </div>
 
@@ -82,13 +84,17 @@
                         <div class="nameTag">
                             <p class="tag">Música</p>
                             <label for="volume-music"></label>
-                            <input type="range" id="volume-music" name="volume" min="-60" max="24" value="0" step="3" oninput="this.nextElementSibling.value = this.value">
+                            <input type="range" id="volume-music" name="volume" min="-60" max="24" value="0" step="3" oninput="controlVolume(this.value); this.nextElementSibling.value = this.value">
                             <output class="dB">0 dB</output>
                         </div>
 
                         <div class="controls">
-                            <button class="musica">1</button> <button class="musica">2</button> 
-                            <button class="musica">3</button> <button class="musica">4</button>
+                            <button onclick="muteMusica1()" id="musica1Button" class="musica">1</button> <button onclick="muteMusica2()" id="musica2Button" class="musica">2</button> 
+                            <button onclick="muteMusica3()" id="musica3Button" class="musica">3</button> <button onclick="muteMusica4()" id="musica4Button" class="musica">4</button>
+                            <audio id="musica-1" autoplay loop style="visibility:hidden" src="../NO-SUBIR/noticia-1/musica_01_cinematic.wav"></audio>
+                            <audio id="musica-2" autoplay loop muted style="visibility:hidden" src="../NO-SUBIR/noticia-1/musica_02_noticiero.wav"></audio>
+                            <audio id="musica-3" autoplay loop muted style="visibility:hidden" src="../NO-SUBIR/noticia-1/musica_03_country.wav"></audio>
+                            <audio id="musica-4" autoplay loop muted style="visibility:hidden" src="../NO-SUBIR/noticia-1/musica_04_silentsuspicions.wav"></audio>
                         </div>
                     </div>
             </section>
@@ -97,41 +103,8 @@
     <footer class="grid-footer">
       <p>© 2026 Orianna Machado & Guillermo Vila</p>
     </footer>
-    
-    <script>
 
-    let locucion1muted = document.getElementById('locucion-1').muted
-    function muteLocucion1() {
-        document.getElementById("locucion-1").muted = locucion1muted = !locucion1muted;
-        document.getElementById("locucion1Button").style = locucion1muted ? "background-color:green" : "#B3C9D6"
-      }
-
-      let locucion2muted = document.getElementById('locucion-2').muted
-      let locucion1muted = document.getElementById('locucion-1').muted
-
-      document.getElementById("locucion1Button").style = locucion2muted ? "background-color:green" : "";
-      document.getElementById("locucion2Button").style = locucion1muted ? "background-color:green" : "";
-
-      function muteLocucion2() {
-        document.getElementById("locucion-2").muted = locucion2muted = !locucion2muted;
-        document.getElementById("locucion2Button").style = locucion2muted ? "background-color:green" : "#B3C9D6";
-      } 
-
-      let voces1Player = document.getElementById("locucion-2")
-      let voces2Player = document.getElementById("locucion-1")
-
-      function normalizeVolume(value) {
-        const min = -60
-        const max = 24
-        return (value - min) / (max - min)
-      }
-      function controlVocesVolume(newVolume) {
-        let volume = normalizeVolume(newVolume)
-        voces1Player.volume = volume;
-        voces2Player.volume = volume;
-      }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
