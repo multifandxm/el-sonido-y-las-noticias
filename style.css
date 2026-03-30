@@ -79,7 +79,6 @@ body {
     "header header header"
     ". main ."
     ". btnSec ."
-    ". form ."
     "footer footer footer";
   justify-items: center;
   row-gap: 4rem;
@@ -106,7 +105,7 @@ body {
 .grid-footer {
   grid-area: footer;
 
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   padding: 2rem;
 
@@ -455,67 +454,3 @@ color: rgb(132, 87, 3);
 }
 
 /*pages*/
-
-/*form style*/
-
-form {
-  display: flex;
-  padding: 1em;
-  min-width: 700px;
-  width: 100vw;
-  max-inline-size: 77ch;
-  background-color: var(--labels-bg-clr);
-}
-
-legend {
-  font-size: larger;
-}
-
-fieldset {
-  border: none;
-  padding: 1em;
-}
-
-#name,
-#mail,
-#message {
-  display: flex;
-  min-width: 400px;
-  text-align: left;
-}
-
-input, 
-textarea,
-.formBtn {
-  margin: 1%;
-  border: none;
-  min-height: 2em;
-}
-
-#name:focus,
-#mail:focus,
-#message:focus,
-textarea:focus {
-  outline: 0.15rem solid var(--primary-clr);
-}
-
-textarea {
-  vertical-align: top;
-  height: 10em;
-  width: 98%;
-  resize: none;
-}
-
-.formBtn {
-  padding: 0.2em 0.4em;
-  color: var(--secondary-clr);
-  border: none;
-  cursor: pointer;
-}
-
-.formBtn:hover {
-  background-color: var(--primary-clr);
-  outline: 0.15rem solid var(--primary-clr);
-}
-
-/*form style end*/
