@@ -108,7 +108,6 @@ svg {
 html {
   box-sizing: border-box;
   font-size: clamp(1rem, 1vw, 2rem);
-  background-color: var(--bckgrnd-clr);
 }
 
 *,
@@ -196,10 +195,12 @@ button {
   border: var(--transparent);
 }
 
-.return {
+ul.return {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  width: 6rem;
+  margin: 0 6rem 0 6rem;
 }
 
 [data-title="abstract"] {
@@ -379,6 +380,8 @@ ul {
 .contacto:hover {
   background-color: var(--hover);
   border-radius: 30%;
+
+  cursor: pointer;
 }
 
 .moon-sun:hover,
