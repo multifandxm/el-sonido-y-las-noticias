@@ -53,7 +53,57 @@ h1, h2, h3, h4, h5, h6 {
   --primary-clr: #222E2F;
   --secondary-clr: #F2EFE2;
   --labels-bg-clr: #B3C9D6;
+  --footer: #222e2f;
+  --hover: #83988a;
+  --news: #697C70;
+  --tag: #8BAEC3;
+  --transparent: #00000000;
+
+  --light-icon-display: block;
+  --dark-icon-display: none;
 }
+
+/*dark mode*/
+
+.darkmode {
+  --bckgrnd-clr: #0e1d21;
+  --primary-clr: #dcded5;
+  --secondary-clr: #F2EFE2;
+  --labels-bg-clr: #677e8a;
+  --footer: #122e34;
+  --hover: #2a4950;
+  --news: #2a4950;
+  --tag: #2a4950;
+  --transparent:#00000000;
+}
+
+#theme-switch,
+#lang-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+svg {
+  fill: var(--secondary-clr);
+}
+
+/*end dark mode */
 
 html {
   box-sizing: border-box;
@@ -69,6 +119,7 @@ html {
 
 body {
   min-height: 100%;
+  background-color: var(--bckgrnd-clr);
 }
 
  /* page layout */
@@ -109,7 +160,7 @@ body {
   height: fit-content;
   padding: 2rem;
 
-  background-color: #222E2F;
+  background-color: var(--footer);
 
   text-align: center;
   color: var(--secondary-clr);
@@ -138,6 +189,11 @@ img {
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+}
+
+button {
+  background-color: var(--transparent);
+  border: var(--transparent);
 }
 
 .return {
@@ -307,7 +363,7 @@ ul {
 
 .newsBtn,
 .formBtn {
-  background-color: #697C70;
+  background-color: var(--news);
 }
 
 .newsBtn {
@@ -321,18 +377,18 @@ ul {
 .tesis:hover, 
 .licencias:hover,
 .contacto:hover {
-  background-color: #83988a;
+  background-color: var(--hover);
   border-radius: 30%;
 }
 
 .moon-sun:hover,
 .globe:hover {
-  background-color: #83988a;
+  background-color: var(--hover);
   border-radius: 100%;
 }
 
 .return:hover {
-  background-color: #83988a;
+  background-color: var(--hover);
   border-radius: 1rem 1rem 1rem 1rem;
 }
 
@@ -341,7 +397,8 @@ h1, h2, h3 {
   padding: 5px 20px 5px 20px;
 }
 
-main > p {
+#abstract-text,
+#abstract-keywords {
   color: var(--primary-clr);
   margin: 2% 0 2% 0;
   padding: 0 20px 5px 20px;
@@ -364,12 +421,13 @@ main > p {
 }
 
 .nameTag {
-  background-color: #8BAEC3;
+  background-color: var(--tag);
   border-radius: 1rem 0 0 1rem;
   padding: 0.5rem;
   font-size: 1.2rem;
   width: 44vw;
   min-height: 11rem;
+  color: var(--primary-clr);
 }
 
 /*volume sliders*/
@@ -388,7 +446,7 @@ input[type="range"] {
 }
 
 .controls {
-  background-color: #B3C9D6;
+  background-color: var(--labels-bg-clr);
   border-radius: 0 1rem 1rem 0;
   padding: 0.5rem;
   min-height: 11rem;
