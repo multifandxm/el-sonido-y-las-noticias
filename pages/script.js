@@ -14,10 +14,8 @@
         document.getElementById("locucion2Button").style = !locucion2muted ? "background-color:#8da750" : "#B3C9D6";
       } 
 
-      let voces1Player = document.getElementById("locucion-2")
-      let voces2Player = document.getElementById("locucion-1")
-
-    
+      let locu2 = document.getElementById("locucion-2")
+      let locu1 = document.getElementById("locucion-1")
 
       let ambiente1muted = document.getElementById('ambiente-1').muted
     function muteAmbiente1() {
@@ -35,8 +33,8 @@
         document.getElementById("ambiente2Button").style = !ambiente2muted ? "background-color:#8da750" : "#B3C9D6";
       } 
 
-      let ambiente1Player = document.getElementById("ambiente-2")
-      let ambiente2Player = document.getElementById("ambiente-1")
+      let ambiente2 = document.getElementById("ambiente-2")
+      let ambiente1 = document.getElementById("ambiente-1")
 
 
 
@@ -56,8 +54,8 @@
         document.getElementById("musica2Button").style = !musica2muted ? "background-color:#8da750" : "#B3C9D6";
       } 
 
-      let musica1Player = document.getElementById("musica-2")
-      let musica2Player = document.getElementById("musica-1")
+      let musica2 = document.getElementById("musica-2")
+      let musica1 = document.getElementById("musica-1")
 
       let musica3muted = document.getElementById('musica-3').muted
     function muteMusica3() {
@@ -75,30 +73,77 @@
         document.getElementById("musica4Button").style = !musica4muted ? "background-color:#8da750" : "#B3C9D6";
       } 
 
-      let musica3Player = document.getElementById("musica-4")
-      let musica4Player = document.getElementById("musica-3")
+      let musica4 = document.getElementById("musica-4")
+      let musica3 = document.getElementById("musica-3")
 
     
 //VOLUME FUNCTION
 
-      function normalizeVolume(value) {
+    function normalizeVolume(value) {
         const min = -60
         const max = 24
         return (value - min) / (max - min)
       }
       
-      function controlVolume(newVolume) {
+      function controlVolumeLocu(newVolume) {
         let volume = normalizeVolume(newVolume)
-        voces1Player.volume = volume;
-        voces2Player.volume = volume;
+        locu1.volume = volume;
+        locu2.volume = volume;
+      }
       
-        ambiente1Player.volume = volume;
-        ambiente2Player.volume = volume;
-      
-        musica1Player.volume = volume;
-        musica2Player.volume = volume;
-        musica3Player.volume = volume;
-        musica4Player.volume = volume;
+      function controlVolumeAmbiente(newVolume) {
+        let volume = normalizeVolume(newVolume)
+        ambiente1.volume = volume;
+        ambiente2.volume = volume;
       }
 
-      
+      function controlVolumeMusica(newVolume) {
+        let volume = normalizeVolume(newVolume)
+        musica1.volume = volume;
+        musica2.volume = volume;
+        musica3.volume = volume;
+        musica4.volume = volume;
+      }
+
+//slider
+
+      var slider1 = document.getElementById("volume-voice");
+      var output1 = document.getElementById("value1");
+
+      output1.innerHTML = slider1.value + " " + "dB";
+
+      slider1.addEventListener("mousemove", function(){
+          output1.innerHTML = this.value + ' ' + 'dB';
+
+          var x = ((slider1.value - slider1.min) / (slider1.max - slider1.min) * 100);
+          var color = 'linear-gradient(0deg, rgb(105, 124, 112)' + x + '%, rgb(242, 239, 226)' + x + '%)';
+          slider1.style.background = color;
+      })
+
+
+      var slider2 = document.getElementById("volume-ambient");
+      var output2 = document.getElementById("value2");
+
+      output2.innerHTML = slider2.value + ' ' + 'dB'
+
+      slider2.addEventListener("mousemove", function(){
+          output2.innerHTML = this.value + ' ' + 'dB';
+
+          var x = ((slider2.value - slider2.min) / (slider2.max - slider2.min) * 100);
+          var color = 'linear-gradient(0deg, rgb(105, 124, 112)' + x + '%, rgb(242, 239, 226)' + x + '%)';
+          slider2.style.background = color;
+      })
+
+
+      var slider3 = document.getElementById("volume-music");
+      var output3 = document.getElementById("value3");
+
+      output3.innerHTML = slider3.value + ' ' + 'dB'
+
+      slider3.addEventListener("mousemove", function(){
+          output3.innerHTML = this.value + ' ' + 'dB';
+
+          var x = ((slider3.value - slider3.min) / (slider3.max - slider3.min) * 100);
+          var color = 'linear-gradient(0deg, rgb(105, 124, 112)' + x + '%, rgb(242, 239, 226)' + x + '%)';
+          slider3.style.background = color;
+      })
