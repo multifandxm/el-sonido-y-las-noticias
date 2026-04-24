@@ -79,22 +79,26 @@
       let musica4Player = document.getElementById("musica-3")
 
     
+//VOLUME FUNCTION
 
       function normalizeVolume(value) {
         const min = -60
         const max = 24
         return (value - min) / (max - min)
       }
+      
       function controlVolume(newVolume) {
         let volume = normalizeVolume(newVolume)
         voces1Player.volume = volume;
         voces2Player.volume = volume;
-
+      
         ambiente1Player.volume = volume;
         ambiente2Player.volume = volume;
-
+      
         musica1Player.volume = volume;
         musica2Player.volume = volume;
         musica3Player.volume = volume;
         musica4Player.volume = volume;
       }
+
+      
